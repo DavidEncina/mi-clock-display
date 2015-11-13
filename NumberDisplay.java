@@ -23,7 +23,7 @@ public class NumberDisplay
     }
     
     /**
-     *Metodo que fija el valor actual del display al valor pasado como parámetro.  
+     * Metodo que fija el valor actual del display al valor pasado como parámetro.  
      */
     public void setValue(int val)
     {
@@ -34,4 +34,17 @@ public class NumberDisplay
             System.out.println ("val debe estar entre 0 y " + limite);
         }
     }
+    
+    /**
+     * Método que devuelve el valor actual del display en forma de cadena de 2 caracteres.
+     */
+    public String getDisplayValue()
+    {
+        String numero = num + "";
+        if (num < 10) {            
+            numero = "0" + numero;
+        }
+        return numero;
+    }
+    
 }
