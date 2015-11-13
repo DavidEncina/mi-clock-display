@@ -23,7 +23,7 @@ public class NumberDisplay
     }
     
     /**
-     * Metodo que fija el valor actual del display al valor pasado como parámetro.  
+     * Fija el valor actual del display al valor pasado como parámetro.  
      */
     public void setValue(int val)
     {
@@ -36,7 +36,7 @@ public class NumberDisplay
     }
     
     /**
-     * Método que devuelve el valor actual del display en forma de cadena de 2 caracteres.
+     *Devuelve el valor actual del display en forma de cadena de 2 caracteres.
      */
     public String getDisplayValue()
     {
@@ -47,4 +47,11 @@ public class NumberDisplay
         return numero;
     }
     
+    /**
+     * Devuelve el valor actual del display como entero
+     */
+    public int getValue()
+    {
+        return num;
+    }
 }
