@@ -1,33 +1,24 @@
 
 /**
- * Write a description of class NumberDisplay here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Se crea un display de 1 nº al que se le asignara un limite superior. * 
+ * @author David Encina Maestro 
+ * @version 1.0
  */
 public class NumberDisplay
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    //Es el nº que aparece en el display.
+    private int num;
+    //Es el limite superior al que puede llegar el display.
+    private int limite;
 
     /**
-     * Constructor for objects of class NumberDisplay
-     */
-    public NumberDisplay()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
+     * Crea un display de un nº.
+     * Al nº se le asigna un límite superior.
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    public NumberDisplay(int limSup)
+    { 
+        limite = limSup;
+        num = 0;        
+    }   
 }
