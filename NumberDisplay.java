@@ -54,4 +54,15 @@ public class NumberDisplay
     {
         return num;
     }
+    
+    /**
+     * Incrementa en 1 al display y lo hace volver al principio si alcanza el límite.
+     */
+    public void increment()
+    {
+        num++;
+        if (num == limite) {
+            num = 0;
+        }
+    }
 }
