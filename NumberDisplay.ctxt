@@ -2,4 +2,7 @@
 comment0.params=limSup
 comment0.target=NumberDisplay(int)
 comment0.text=\r\n\ Crea\ un\ display\ de\ un\ n\u00BA.\r\n\ Al\ n\u00BA\ se\ le\ asigna\ un\ l\u00EDmite\ superior.\r\n\ \r\n
-numComments=1
+comment1.params=val
+comment1.target=void\ setValue(int)
+comment1.text=\r\nMetodo\ que\ fija\ el\ valor\ actual\ del\ display\ al\ valor\ pasado\ como\ par\u00E1metro.\ \ \r\n
+numComments=2

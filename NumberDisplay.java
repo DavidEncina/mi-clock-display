@@ -10,7 +10,7 @@ public class NumberDisplay
     private int num;
     //Es el limite superior al que puede llegar el display.
     private int limite;
-
+ 
     /**
      * Crea un display de un nº.
      * Al nº se le asigna un límite superior.
@@ -20,5 +20,18 @@ public class NumberDisplay
     { 
         limite = limSup;
         num = 0;        
-    }   
+    }
+    
+    /**
+     *Metodo que fija el valor actual del display al valor pasado como parámetro.  
+     */
+    public void setValue(int val)
+    {
+        if (val <= limite && val >= 0) {
+            num = val;
+        }
+        else {
+            System.out.println ("val debe estar entre 0 y " + limite);
+        }
+    }
 }
