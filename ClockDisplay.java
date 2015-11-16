@@ -36,5 +36,15 @@ public class ClockDisplay
         minutos = new NumberDisplay(60);
         minutos.setValue(m);
         horaActual = horas.getDisplayValue() + ":" + minutos.getDisplayValue(); 
-    }   
+    }
+    
+    /**
+     * Se introducen horas y segundos para cambiar la hora del reloj.     
+     */
+    public void setTime(int h, int m)
+    {
+        horas.setValue(h);
+        minutos.setValue(m);
+        horaActual = horas.getDisplayValue() + ":" + minutos.getDisplayValue();
+    }
 }
