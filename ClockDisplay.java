@@ -47,4 +47,13 @@ public class ClockDisplay
         minutos.setValue(m);
         horaActual = horas.getDisplayValue() + ":" + minutos.getDisplayValue();
     }
+    
+     /**
+     * Metodo para devolver la hora y los minutos en formato de 5 caracteres separados por dos puntos.     
+     */
+    public String getTime()
+    {
+        String time = horas.getDisplayValue() + ":" + minutos.getDisplayValue();
+        return time;   
+    }         
 }
