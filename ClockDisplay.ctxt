@@ -1,2 +1,8 @@
 #BlueJ class context
-numComments=0
+comment0.params=
+comment0.target=ClockDisplay()
+comment0.text=\r\n\ Crea\ un\ reloj\ cuya\ hora\ de\ inicio\ es\ 00\:00.\r\n
+comment1.params=h\ m
+comment1.target=ClockDisplay(int,\ int)
+comment1.text=\r\n\ Crea\ un\ reloj\ cuya\ hora\ de\ inicio\ se\ fija\ al\ crearlo.\r\n
+numComments=2
