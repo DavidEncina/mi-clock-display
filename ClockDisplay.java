@@ -55,5 +55,19 @@ public class ClockDisplay
     {
         String time = horas.getDisplayValue() + ":" + minutos.getDisplayValue();
         return time;   
-    }         
-}
+    }
+    
+    /**
+     * Permite avanzar el tiempo 1 minuto.
+     * Cuando se pase de 59 minutos los minutos volveran a 0 y las horas sumaran 1.
+     * Cuando las horas lleguen a 24 volveran automaticamente a 0.
+     */
+    public void timeTick()
+    {
+        minutos.increment();
+        if (minutos.getValue() == 0) {
+            horas.increment();
+        }
+        horaActual = horas.getDisplayValue() + ":" + minutos.getDisplayValue();
+    }
+}    
