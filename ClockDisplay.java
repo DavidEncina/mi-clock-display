@@ -22,7 +22,7 @@ public class ClockDisplay
      */
     public ClockDisplay(boolean formato)
     {
-        //Inicializa el reloj a 00:00.        
+        //Inicializa el reloj a 00:00 y se elige el formato.        
         horas = new NumberDisplay(24);        
         minutos = new NumberDisplay(60);        
         tipoReloj = formato;
@@ -76,6 +76,23 @@ public class ClockDisplay
     }
     
     /**
+     * Permite alternar entre los dos formatos de reloj.
+     */    
+    public void cambiarFormato()
+    {
+          if (tipoReloj == true) {
+              tipoReloj = false;
+              String hora = horas.getDisplayValue();
+              String periodo = "";
+              horaActual = hora + ":" + minutos.getDisplayValue() + periodo;
+          }
+          else {
+              tipoReloj = true;
+              horaActual = horas.getDisplayValue() + ":" + minutos.getDisplayValue();        
+          }          
+    }
+    
+    /**
      * Se introducen horas y segundos para cambiar la hora del reloj.     
      */
     public void setTime(int h, int m)
@@ -89,18 +106,7 @@ public class ClockDisplay
      * Metodo para devolver la hora y los minutos en formato de 5 caracteres separados por dos puntos.     
      */
     public String getTime()
-    {
-        String periodo = " am";
-        String hora = horas.getDisplayValue();
-        if (horas.getValue() > 12) {
-            periodo = " pm";
-            hora = horas.getValue() - 12 + "";
-        }
-        
-        if (horas.getValue() == 00) {
-            hora = 12 + "";
-        }
-        horaActual = hora + ":" + minutos.getDisplayValue() + periodo;
+    {        
         return horaActual;   
     }
     
