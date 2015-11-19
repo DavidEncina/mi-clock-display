@@ -2,8 +2,8 @@
 /**
  * * Se crea un reloj que marca la hora y los segundos.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author David Encina Maestro
+ * @version 1.0
  */
 public class ClockDisplay
 {
@@ -12,7 +12,7 @@ public class ClockDisplay
     //Los minutos del reloj.
     private NumberDisplay minutos;
     //La hora y los minutos actuales en 5 caracteres.
-    private String horaActual;
+    private String horaActual;    
     
     /**
      * Crea un reloj cuya hora de inicio es 00:00.
@@ -34,7 +34,7 @@ public class ClockDisplay
         horas = new NumberDisplay(24);
         horas.setValue(h);
         minutos = new NumberDisplay(60);
-        minutos.setValue(m);
+        minutos.setValue(m);        
         horaActual = horas.getDisplayValue() + ":" + minutos.getDisplayValue(); 
     }
     
@@ -53,8 +53,18 @@ public class ClockDisplay
      */
     public String getTime()
     {
-        String time = horas.getDisplayValue() + ":" + minutos.getDisplayValue();
-        return time;   
+        String periodo = " am";
+        String hora = horas.getDisplayValue();
+        if (horas.getValue() > 12) {
+            periodo = " pm";
+            hora = horas.getValue() - 12 + "";
+        }
+        
+        if (horas.getValue() == 00) {
+            hora = 12 + "";
+        }
+        horaActual = hora + ":" + minutos.getDisplayValue() + periodo;
+        return horaActual;   
     }
     
     /**
@@ -70,4 +80,5 @@ public class ClockDisplay
         }
         horaActual = horas.getDisplayValue() + ":" + minutos.getDisplayValue();
     }
-}    
+}
+   
