@@ -12,30 +12,67 @@ public class ClockDisplay
     //Los minutos del reloj.
     private NumberDisplay minutos;
     //La hora y los minutos actuales en 5 caracteres.
-    private String horaActual;    
+    private String horaActual;
+    //Permite elegir entre formato 24 h. o 12 h.
+    private boolean tipoReloj;
     
     /**
      * Crea un reloj cuya hora de inicio es 00:00.
+     * Permite elegir el formato de hora entre 24 h y 12 h.
      */
-    public ClockDisplay()
+    public ClockDisplay(boolean formato)
     {
-        //Inicializa el reloj a 00:00.
+        //Inicializa el reloj a 00:00.        
         horas = new NumberDisplay(24);        
-        minutos = new NumberDisplay(60);
-        horaActual = horas.getDisplayValue() + ":" + minutos.getDisplayValue();        
+        minutos = new NumberDisplay(60);        
+        tipoReloj = formato;
+        if (formato == true) {
+           horaActual = horas.getDisplayValue() + ":" + minutos.getDisplayValue();                     
+        }
+        else {
+            String periodo = " am";
+            String hora = horas.getDisplayValue();        
+            if (horas.getValue() > 12) {
+                periodo = " pm";
+                hora = horas.getValue() - 12 + "";
+            }
+            
+            if (horas.getValue() == 00) {
+                hora = 12 + "";
+            }
+            horaActual = hora + ":" + minutos.getDisplayValue() + periodo;
+        }             
     }
 
     /**
      * Crea un reloj cuya hora de inicio se fija al crearlo.
+     * Permite elegir el formato de hora entre 24 h y 12 h.
      */
-    public ClockDisplay(int h, int m)
+    public ClockDisplay(int h, int m, boolean formato)
     {
         //Inicializa el reloj a una hora fijada en horas y miutos.
         horas = new NumberDisplay(24);
         horas.setValue(h);
         minutos = new NumberDisplay(60);
         minutos.setValue(m);        
-        horaActual = horas.getDisplayValue() + ":" + minutos.getDisplayValue(); 
+        horaActual = horas.getDisplayValue() + ":" + minutos.getDisplayValue();
+        tipoReloj = formato;
+        if (formato == true) {
+           horaActual = horas.getDisplayValue() + ":" + minutos.getDisplayValue();                     
+        }
+        else {
+            String periodo = " am";
+            String hora = horas.getDisplayValue();        
+            if (horas.getValue() > 12) {
+                periodo = " pm";
+                hora = horas.getValue() - 12 + "";
+            }
+            
+            if (horas.getValue() == 00) {
+                hora = 12 + "";
+            }
+            horaActual = hora + ":" + minutos.getDisplayValue() + periodo;
+        }
     }
     
     /**

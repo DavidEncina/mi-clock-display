@@ -1,10 +1,10 @@
 #BlueJ class context
-comment0.params=
-comment0.target=ClockDisplay()
-comment0.text=\r\n\ Crea\ un\ reloj\ cuya\ hora\ de\ inicio\ es\ 00\:00.\r\n
-comment1.params=h\ m
-comment1.target=ClockDisplay(int,\ int)
-comment1.text=\r\n\ Crea\ un\ reloj\ cuya\ hora\ de\ inicio\ se\ fija\ al\ crearlo.\r\n
+comment0.params=formato
+comment0.target=ClockDisplay(boolean)
+comment0.text=\r\n\ Crea\ un\ reloj\ cuya\ hora\ de\ inicio\ es\ 00\:00.\r\n\ Permite\ elegir\ el\ formato\ de\ hora\ entre\ 24\ h\ y\ 12\ h.\r\n
+comment1.params=h\ m\ formato
+comment1.target=ClockDisplay(int,\ int,\ boolean)
+comment1.text=\r\n\ Crea\ un\ reloj\ cuya\ hora\ de\ inicio\ se\ fija\ al\ crearlo.\r\n\ Permite\ elegir\ el\ formato\ de\ hora\ entre\ 24\ h\ y\ 12\ h.\r\n
 comment2.params=h\ m
 comment2.target=void\ setTime(int,\ int)
 comment2.text=\r\n\ Se\ introducen\ horas\ y\ segundos\ para\ cambiar\ la\ hora\ del\ reloj.\ \ \ \ \ \r\n
